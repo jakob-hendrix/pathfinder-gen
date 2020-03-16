@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.CLI", "PathfinderIM.CLI\PathfinderIM.CLI.csproj", "{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.Library", "PathfinderIM.Items.Library\PathfinderIM.Library.csproj", "{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAD11588-544A-414A-A192-1CB6C32F36E6}
+	EndGlobalSection
+EndGlobal
