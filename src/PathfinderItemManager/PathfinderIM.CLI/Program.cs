@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System.IO;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using PathfinderIM.CLI.Services;
 
 namespace PathfinderIM.CLI
@@ -8,7 +10,7 @@ namespace PathfinderIM.CLI
         static void Main(string[] args)
         {
             // configure services
-            IServiceCollection services = ConfigureServices();
+            var services = ConfigureServices();
 
             // create data provider
             var serviceProvider = services.BuildServiceProvider();
@@ -20,9 +22,23 @@ namespace PathfinderIM.CLI
         private static IServiceCollection ConfigureServices()
         {
             IServiceCollection services = new ServiceCollection();
+
+            var config = LoadConfiguration();
+
+            services.AddSingleton(config);
             services.AddTransient<ITestService, TestService>();
             services.AddTransient<ConsoleApplication>();
+
             return services;
+        }
+
+        private static IConfiguration LoadConfiguration()
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            return builder.Build();
         }
     }
 }
