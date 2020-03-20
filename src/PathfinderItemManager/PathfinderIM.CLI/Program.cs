@@ -3,8 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using PathfinderIM.CLI.DataAccess;
 using PathfinderIM.CLI.Services;
+using PathfinderIM.DataAccess;
 
 namespace PathfinderIM.CLI
 {
@@ -19,7 +19,9 @@ namespace PathfinderIM.CLI
             var serviceProvider = services.BuildServiceProvider();
 
             // start running the program
-            serviceProvider.GetService<ConsoleApplication>().Run();
+            serviceProvider
+                .GetService<ConsoleApplication>()
+                .Run();
         }
 
         private static IServiceCollection ConfigureServices()
@@ -40,8 +42,8 @@ namespace PathfinderIM.CLI
             services.AddSingleton(config);
             services.AddTransient<ITestService, TestService>();
 
-            var connectionString = config.GetConnectionString("InMemory");
-            services.AddDbContext<SampleDbContext>
+            var connectionString = config.GetConnectionString("WondrousItemsSqlLite");
+            services.AddDbContext<PathfinderIMContext>
             (
             options => options.UseSqlite(connectionString)
             );
