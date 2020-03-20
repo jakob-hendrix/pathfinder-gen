@@ -40,12 +40,15 @@ namespace PathfinderIM.CLI
 
             // Add the config to our DI container for later use
             services.AddSingleton(config);
-            services.AddTransient<ITestService, TestService>();
+//            services.AddTransient<ITestService, TestService>();
 
-            var connectionString = config.GetConnectionString("WondrousItemsSqlLite");
+
+            // Set up our Db context
+            var connectionString = config.GetConnectionString("ItemsSql");
             services.AddDbContext<PathfinderIMContext>
             (
-            options => options.UseSqlite(connectionString)
+            //options => options.UseSqlite(connectionString)
+            options => options.UseSqlServer(connectionString)
             );
             
             // Register out application entry point
