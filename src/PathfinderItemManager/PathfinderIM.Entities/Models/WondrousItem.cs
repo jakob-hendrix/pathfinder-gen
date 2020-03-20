@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-namespace PathfinderIM.Library.Models
+﻿namespace PathfinderIM.Entities.Models
 {
     public class WondrousItem
     {
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public CurrencyValue Price { get; set; }
+        public decimal GoldPrice { get; set; }
         public ItemSlot Slot { get; set; }
         public decimal Weight { get; set; }
 
@@ -16,6 +14,9 @@ namespace PathfinderIM.Library.Models
         //public string AuraStrength { get; set; }
         //public string AuraType { get; set; }
         //public int CasterLevel { get; set; }
+
+        // how to store - JSON formatted text string deserialized by the data access code
+        // XML data type?
         //public List<ConstructionRequirement> ConstructionRequirements { get; set; }
     }
 }

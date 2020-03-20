@@ -1,4 +1,4 @@
-﻿namespace PathfinderIM.Library.Models
+﻿namespace PathfinderIM.Entities.Models
 {
     public class SourceBook
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PathfinderIM.Library.Models;
+using PathfinderIM.Entities.Models;
 
 namespace PathfinderIM.DataAccess
 {
@@ -11,7 +11,7 @@ namespace PathfinderIM.DataAccess
             
         }
 
-        private DbSet<WondrousItem> WondrousItems { get; set; }
+        public DbSet<WondrousItem> WondrousItems { get; set; }
         public DbSet<SourceBook> SourceBooks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

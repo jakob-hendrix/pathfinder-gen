@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.CLI", "PathfinderIM.CLI\PathfinderIM.CLI.csproj", "{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.Library", "PathfinderIM.Items.Library\PathfinderIM.Library.csproj", "{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.DataAccess", "PathfinderIM.DataAccess\PathfinderIM.DataAccess.csproj", "{60F2E228-94AD-4A2E-BFC4-6033DC365F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderIM.DataAccess", "PathfinderIM.DataAccess\PathfinderIM.DataAccess.csproj", "{60F2E228-94AD-4A2E-BFC4-6033DC365F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.Test", "PathfinderIM.Test\PathfinderIM.Test.csproj", "{D110E2F3-8D0D-47EE-BD1E-0DEB7C46D153}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderIM.Test", "PathfinderIM.Test\PathfinderIM.Test.csproj", "{D110E2F3-8D0D-47EE-BD1E-0DEB7C46D153}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.Entities", "PathfinderIM.Entities\PathfinderIM.Entities.csproj", "{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E66C6BA1-7EDE-40B0-95A2-7DED46160E6D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9E47CE1-3C48-4986-B9E8-77C3A6362F55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{60F2E228-94AD-4A2E-BFC4-6033DC365F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{60F2E228-94AD-4A2E-BFC4-6033DC365F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60F2E228-94AD-4A2E-BFC4-6033DC365F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{D110E2F3-8D0D-47EE-BD1E-0DEB7C46D153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D110E2F3-8D0D-47EE-BD1E-0DEB7C46D153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D110E2F3-8D0D-47EE-BD1E-0DEB7C46D153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

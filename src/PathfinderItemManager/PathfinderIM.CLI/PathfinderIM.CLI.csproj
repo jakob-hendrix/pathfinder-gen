@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.2" />
@@ -16,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PathfinderIM.DataAccess\PathfinderIM.DataAccess.csproj" />
-    <ProjectReference Include="..\PathfinderIM.Items.Library\PathfinderIM.Library.csproj" />
+    <ProjectReference Include="..\PathfinderIM.Entities\PathfinderIM.Entities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
