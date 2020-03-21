@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.Test", "Pathfi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderIM.Entities", "PathfinderIM.Entities\PathfinderIM.Entities.csproj", "{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderIM.Utilities", "PathfinderIM.Utilities\PathfinderIM.Utilities.csproj", "{9EA79E28-D3F3-488F-9607-A889F9D0CC88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04F400ED-BAB4-4C9D-B29E-EDA5FE2208E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA79E28-D3F3-488F-9607-A889F9D0CC88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA79E28-D3F3-488F-9607-A889F9D0CC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA79E28-D3F3-488F-9607-A889F9D0CC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA79E28-D3F3-488F-9607-A889F9D0CC88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
