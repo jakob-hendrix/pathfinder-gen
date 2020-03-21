@@ -29,7 +29,7 @@ namespace PathfinderIM.CLI
             IServiceCollection services = new ServiceCollection();
 
             // Grab any base config settings we need
-            var config = LoadConfiguration();
+            var config = new ConfigurationService().GetConfiguration();
             services.AddLogging(logging =>
             {
                 logging.AddConfiguration(config.GetSection("Logging"));
@@ -40,30 +40,19 @@ namespace PathfinderIM.CLI
 
             // Add the config to our DI container for later use
             services.AddSingleton(config);
-//            services.AddTransient<ITestService, TestService>();
 
 
             // Set up our Db context
-            var connectionString = config.GetConnectionString("ItemsSql");
-            services.AddDbContext<PathfinderIMContext>
+            services.AddDbContext<PathfinderItemContext>
             (
             //options => options.UseSqlite(connectionString)
-            options => options.UseSqlServer(connectionString)
+            options => options.UseSqlServer(config.GetConnectionString(nameof(PathfinderItemContext)))
             );
-            
+
             // Register out application entry point
             services.AddTransient<ConsoleApplication>();
 
             return services;
-        }
-
-        private static IConfiguration LoadConfiguration()
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
-            return builder.Build();
         }
     }
 }

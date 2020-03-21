@@ -7,9 +7,9 @@ namespace PathfinderIM.CLI.Services
 {
     public class ConsoleApplication : IApplication
     {
-        private readonly PathfinderIMContext _context;
+        private readonly PathfinderItemContext _context;
   
-        public ConsoleApplication(PathfinderIMContext context)
+        public ConsoleApplication(PathfinderItemContext context)
         {
             _context = context;
         }
@@ -18,7 +18,7 @@ namespace PathfinderIM.CLI.Services
         {
             Console.WriteLine("Starting run...");
 
-            //_context.Database.EnsureDeleted();
+            _context.Database.EnsureDeleted();
             _context.Database.EnsureCreated();
             GetItems("Before add: ");
             AddItem();
