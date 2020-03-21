@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using PathfinderIM.CLI.Services;
-using PathfinderIM.DataAccess;
+using PathfinderIM.Data;
 
 namespace PathfinderIM.CLI.DesignTooling
 {

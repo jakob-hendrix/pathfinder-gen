@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PathfinderIM.DataAccess\PathfinderIM.DataAccess.csproj" />
+    <ProjectReference Include="..\PathfinderIM.Data\PathfinderIM.Data.csproj" />
     <ProjectReference Include="..\PathfinderIM.Entities\PathfinderIM.Entities.csproj" />
     <ProjectReference Include="..\PathfinderIM.Utilities\PathfinderIM.Utilities.csproj" />
   </ItemGroup>

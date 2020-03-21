@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using PathfinderIM.DataAccess;
+using PathfinderIM.Data;
 using PathfinderIM.Entities.Models;
 
 namespace PathfinderIM.CLI.Services

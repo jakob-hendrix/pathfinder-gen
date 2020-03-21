@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PathfinderIM.Entities.Models;
 
-namespace PathfinderIM.DataAccess
+namespace PathfinderIM.Data
 {
     public class PathfinderItemContext : DbContext
     {

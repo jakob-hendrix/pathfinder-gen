@@ -1,10 +1,9 @@
-﻿using System.IO;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using PathfinderIM.CLI.Services;
-using PathfinderIM.DataAccess;
+using PathfinderIM.Data;
 
 namespace PathfinderIM.CLI
 {
