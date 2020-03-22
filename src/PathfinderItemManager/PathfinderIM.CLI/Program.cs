@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -11,16 +12,27 @@ namespace PathfinderIM.CLI
     {
         static void Main(string[] args)
         {
-            // configure services
             var services = ConfigureServices();
-
-            // create data provider
             var serviceProvider = services.BuildServiceProvider();
+
+            ConfigureData(serviceProvider);
 
             // start running the program
             serviceProvider
                 .GetService<ConsoleApplication>()
                 .Run();
+        }
+
+        private static void ConfigureData(ServiceProvider serviceProvider)
+        {
+            Console.WriteLine("Seeding data");
+
+            var context = serviceProvider.GetService<PathfinderItemContext>();
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
+            SeedData.Initialize(serviceProvider);
+            
+            Console.WriteLine("Data seed complete.");
         }
 
         private static IServiceCollection ConfigureServices()
@@ -39,7 +51,6 @@ namespace PathfinderIM.CLI
 
             // Add the config to our DI container for later use
             services.AddSingleton(config);
-
 
             // Set up our Db context
             services.AddDbContext<PathfinderItemContext>

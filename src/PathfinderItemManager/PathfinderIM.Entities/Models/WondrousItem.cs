@@ -1,4 +1,6 @@
-﻿namespace PathfinderIM.Entities.Models
+﻿using System.Security.Cryptography;
+
+namespace PathfinderIM.Entities.Models
 {
     public class WondrousItem
     {
@@ -18,5 +20,10 @@
         // how to store - JSON formatted text string deserialized by the data access code
         // XML data type?
         //public List<ConstructionRequirement> ConstructionRequirements { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id: {Id}\nName: {Name}\nDescription:\n{Description}";
+        }
     }
 }
