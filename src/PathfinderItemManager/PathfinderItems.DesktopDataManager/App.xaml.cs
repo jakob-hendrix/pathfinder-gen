@@ -24,6 +24,8 @@ namespace PathfinderItems.DesktopDataManager
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
 
+            DataInitializer.InitializeData(ServiceProvider.GetService<PathfinderItemContext>());
+
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
         }

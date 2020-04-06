@@ -6,10 +6,8 @@ namespace PathfinderIM.Data
 {
     public static class SeedData
     {
-        public static void Initialize(ServiceProvider serviceProvider)
+        public static void Initialize(PathfinderItemContext context)
         {
-            var context = serviceProvider.GetService<PathfinderItemContext>();
-
             //TODO - load from local json files
 
             LoadSourceBooks(context);

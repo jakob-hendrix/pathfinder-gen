@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
+using PathfinderIM.Data;
 
 namespace PathfinderItems.DesktopDataManager
 {
@@ -7,9 +9,14 @@ namespace PathfinderItems.DesktopDataManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly PathfinderItemContext _context;
+
+        public MainWindow(PathfinderItemContext context)
         {
             InitializeComponent();
+            _context = context;
+
+            ItemGrid.ItemsSource = _context.WondrousItems.ToList();
         }
     }
 }
