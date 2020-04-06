@@ -28,7 +28,7 @@ namespace PathfinderIM.CLI
             Console.WriteLine("Seeding data");
 
             var context = serviceProvider.GetService<PathfinderItemContext>();
-            context.Database.EnsureDeleted();
+            //context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             SeedData.Initialize(serviceProvider);
             

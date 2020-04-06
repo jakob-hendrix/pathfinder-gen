@@ -12,9 +12,16 @@ namespace PathfinderIM.CLI.DesignTooling
         {
             var config = new ConfigurationService().GetConfiguration();
             var builder = new DbContextOptionsBuilder<PathfinderItemContext>();
-            var context = new PathfinderItemContext(builder.UseSqlite(
-                config.GetConnectionString(nameof(PathfinderItemContext)), 
-                options => options.MigrationsAssembly("PathfinderIM.DataAccess")).Options);
+
+            //var context = new PathfinderItemContext(builder.UseSqlite(
+            //    config.GetConnectionString(nameof(PathfinderItemContext)),
+            //    options => options.MigrationsAssembly("PathfinderIM.Data")).Options);
+
+            var context = new PathfinderItemContext(builder
+                .UseSqlServer(
+                    config.GetConnectionString(nameof(PathfinderItemContext)), 
+                    options => options.MigrationsAssembly("PathfinderIM.Data")).Options);
+
             return context;
         }
     }

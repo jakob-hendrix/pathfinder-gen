@@ -1,0 +1,14 @@
+{
+	"SourceBooks": [
+		{
+			"Name": "Ultimate Equipment",
+			"URL": "https://paizo.com/products/btpy8tmc?Pathfinder-Roleplaying-Game-Ultimate-Equipment",
+			"License": "OGL" 
+		},
+		{
+			"Name": "Advanced Race Guide",
+			"URL": "https://paizo.com/products/btpy8rv2?Pathfinder-Roleplaying-Game-Advanced-Race-Guide",
+			"License": "OGL"
+		}
+	] 
+}
