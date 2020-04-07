@@ -12,9 +12,10 @@ using System;
 namespace PathfinderIM.Data.Migrations
 {
     [DbContext(typeof(PathfinderItemContext))]
-    partial class PathfinderItemContextModelSnapshot : ModelSnapshot
+    [Migration("20200407213318_SourceBookChanges")]
+    partial class SourceBookChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
