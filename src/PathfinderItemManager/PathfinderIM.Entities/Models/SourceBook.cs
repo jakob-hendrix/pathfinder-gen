@@ -4,8 +4,7 @@
     {
         public int Id { get; set; } 
         public string BookName { get; set; }
-        public string Url { get; set; }
-        public string License { get; set; }
+        public SourceBookType BookType { get; set; }
 
         public override string ToString()
         {
