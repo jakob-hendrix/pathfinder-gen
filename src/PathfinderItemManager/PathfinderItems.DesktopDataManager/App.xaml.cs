@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,7 +23,7 @@ namespace PathfinderItems.DesktopDataManager
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
 
-            DataInitializer.InitializeData(ServiceProvider.GetService<PathfinderItemContext>());
+            DataInitializer.InitializeData(ServiceProvider.GetService<PathfinderItemContext>(), true);
 
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();

@@ -28,7 +28,7 @@ namespace PathfinderIM.CLI
             var context = serviceProvider.GetService<PathfinderItemContext>();
             
             Console.WriteLine("Seeding data");
-            DataInitializer.InitializeData(context);
+            DataInitializer.InitializeData(context, true);
             Console.WriteLine("Data seed complete.");
         }
 

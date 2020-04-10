@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Newtonsoft.Json;
 
 namespace PathfinderIM.Data
 {
@@ -6,15 +7,12 @@ namespace PathfinderIM.Data
     {
         public static void Initialize(PathfinderItemContext context)
         {
-            //TODO - load from local json files
             var path = 
-                Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory,"SeedData");
+                Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory,"BaseData");
 
-            var dataFiles = System.IO.Directory.GetFiles(path, "*.json");
-
+            var dataFiles = System.IO.Directory.GetFiles(path, "*_base.json");
             foreach (var file in dataFiles)
             {
-                // read this file
                 LoadData(context, file);
             }
         }
@@ -23,11 +21,13 @@ namespace PathfinderIM.Data
         {
             using (StreamReader reader = new StreamReader(file))
             {
-                // TODO: unpack this json object into the search book and wondrous items
+                string json = reader.ReadToEnd();
+                dynamic items = JsonConvert.DeserializeObject(json);
+
+                
             }
+
+            context.SaveChanges();
         }
     }
 }
-
-// context.WondrousItems.Add(item);
-// context.SaveChanges();

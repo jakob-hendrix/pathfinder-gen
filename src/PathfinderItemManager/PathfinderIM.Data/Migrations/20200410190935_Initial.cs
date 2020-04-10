@@ -1,22 +1,33 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PathfinderIM.Data.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Feats",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Feats", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "SourceBooks",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     BookName = table.Column<string>(nullable: true),
-                    License = table.Column<string>(nullable: true),
+                    Publisher = table.Column<string>(nullable: true),
+                    BookType = table.Column<int>(nullable: false),
                     Url = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -25,17 +36,33 @@ namespace PathfinderIM.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Spells",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Spells", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "WondrousItems",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Description = table.Column<string>(nullable: true),
-                    GoldPrice = table.Column<decimal>(nullable: false),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
+                    GoldPrice = table.Column<decimal>(nullable: false),
                     Slot = table.Column<int>(nullable: false),
+                    Weight = table.Column<decimal>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
                     SourceId = table.Column<int>(nullable: true),
-                    Weight = table.Column<decimal>(nullable: false)
+                    Aura = table.Column<string>(nullable: true),
+                    CasterLevel = table.Column<int>(nullable: false),
+                    ConstructionRequirements = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,6 +83,12 @@ namespace PathfinderIM.Data.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Feats");
+
+            migrationBuilder.DropTable(
+                name: "Spells");
+
             migrationBuilder.DropTable(
                 name: "WondrousItems");
 

@@ -2,9 +2,12 @@
 {
     public static class DataInitializer
     {
-        public static void InitializeData(PathfinderItemContext context)
+        public static void InitializeData(PathfinderItemContext context, bool wipeCurrentData)
         {
-            //context.Database.EnsureDeleted();
+            if (wipeCurrentData)
+            {
+                context.Database.EnsureDeleted();
+            }
             context.Database.EnsureCreated();
             SeedData.Initialize(context);
         }

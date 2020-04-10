@@ -1,4 +1,4 @@
-﻿namespace PathfinderIM.Entities.Models
+﻿namespace PathfinderIM.Entities.Models.Enums
 {
     public enum SourceBookType
     {

@@ -1,0 +1,15 @@
+{
+    "SourceBooks": [{
+            "Name": "Ultimate Equipment",
+            "Publisher": "Paizo",
+            "BookType": "PaizoCoreSourceMaterial",
+            "URL": "https://paizo.com/products/btpy8tmc?Pathfinder-Roleplaying-Game-Ultimate-Equipment"
+        },
+        {
+            "Name": "Advanced Player's Guide",
+            "Publisher": "Paizo",
+            "BookType": "PaizoCoreSourceMaterial",
+            "URL": "https://paizo.com/products/btpy8fo1?Pathfinder-Roleplaying-Game-Advanced-Players-Guide"
+        }
+    ]
+}
