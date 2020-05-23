@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderTools.WebUI", "src\PathfinderTools.WebUI\PathfinderTools.WebUI.csproj", "{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderTools.Core", "src\PathfinderTools.Core\PathfinderTools.Core.csproj", "{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderTools.Infrastructure", "src\PathfinderTools.Infrastructure\PathfinderTools.Infrastructure.csproj", "{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9A58839-6DDF-4337-B195-95363664C132}
+	EndGlobalSection
+EndGlobal
