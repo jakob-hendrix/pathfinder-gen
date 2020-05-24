@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-PathfinderTools.WebUI-B1CCB791-4C2C-4009-B6DE-1577D4EC84FC</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.4" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PathfinderTools.Infrastructure\PathfinderTools.Infrastructure.csproj" />
