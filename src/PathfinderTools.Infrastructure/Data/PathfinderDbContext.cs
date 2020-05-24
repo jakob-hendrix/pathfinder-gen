@@ -11,7 +11,14 @@ namespace PathfinderTools.Infrastructure.Data
         {
 
         }
+
         public DbSet<CharacterClass> CharacterClasses { get; set; }
         public DbSet<Race> Races { get; set; }
+
+        // TODO: useful?
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PathfinderDbContext).Assembly);
+        }
     }
 }

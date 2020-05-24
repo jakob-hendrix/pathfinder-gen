@@ -23,9 +23,6 @@ namespace PathfinderTools.WebUI
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var identityContext = services.GetRequiredService<ApplicationDbContext>();
-                    InitializeDatabase(identityContext);
-
                     var pathfinderContext = services.GetRequiredService<PathfinderDbContext>();
                     InitializeDatabase(pathfinderContext);
 
