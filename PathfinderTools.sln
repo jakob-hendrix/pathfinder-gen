@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderTools.WebUI", "src\PathfinderTools.WebUI\PathfinderTools.WebUI.csproj", "{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderTools.Core", "src\PathfinderTools.Core\PathfinderTools.Core.csproj", "{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderTools.Domain", "src\PathfinderTools.Domain\PathfinderTools.Domain.csproj", "{717E20EA-BBB9-44C3-8EC8-4F6DA578C86A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderTools.Infrastructure", "src\PathfinderTools.Infrastructure\PathfinderTools.Infrastructure.csproj", "{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderTools.Application", "src\PathfinderTools.Application\PathfinderTools.Application.csproj", "{E5AC9D9E-A473-4443-B9BB-3AD374D0863D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderTools.Infrastructure", "src\PathfinderTools.Infrastructure\PathfinderTools.Infrastructure.csproj", "{89965747-80F5-451A-AA91-F4F056FCD77F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +21,18 @@ Global
 		{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6B36D88-A6F4-44D8-A406-6FA63E1D5A25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAB94B44-9943-4DCD-A11B-7D4B5D2A2A91}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8D0F0E7-35DE-4839-A7B9-963F5A87FE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717E20EA-BBB9-44C3-8EC8-4F6DA578C86A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717E20EA-BBB9-44C3-8EC8-4F6DA578C86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717E20EA-BBB9-44C3-8EC8-4F6DA578C86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717E20EA-BBB9-44C3-8EC8-4F6DA578C86A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AC9D9E-A473-4443-B9BB-3AD374D0863D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AC9D9E-A473-4443-B9BB-3AD374D0863D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AC9D9E-A473-4443-B9BB-3AD374D0863D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AC9D9E-A473-4443-B9BB-3AD374D0863D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89965747-80F5-451A-AA91-F4F056FCD77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89965747-80F5-451A-AA91-F4F056FCD77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89965747-80F5-451A-AA91-F4F056FCD77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89965747-80F5-451A-AA91-F4F056FCD77F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

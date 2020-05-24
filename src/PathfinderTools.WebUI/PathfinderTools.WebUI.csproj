@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PathfinderTools.Core\PathfinderTools.Core.csproj" />
+    <ProjectReference Include="..\PathfinderTools.Infrastructure\PathfinderTools.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
