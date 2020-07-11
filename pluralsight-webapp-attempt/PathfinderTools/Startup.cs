@@ -17,6 +17,7 @@ namespace PathfinderTools
         {
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseNodeModules();
         }
     }
 }
