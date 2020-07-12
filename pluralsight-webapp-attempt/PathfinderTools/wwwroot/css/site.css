@@ -23,10 +23,10 @@ div {
     background-color: gray
 }
 
-#theForm input[type=submit] {
-    background-color: green;
-    color: white;
-}
+    #theForm input[type=submit] {
+        background-color: green;
+        color: white;
+    }
 
 ul.characterDetails {
     font-size: small;
@@ -40,11 +40,11 @@ ul.characterDetails {
     width: 450px;
 }
 
-.characterDisplay img {
-    margin: 3px;
-    float: left;
-    max-height: 150px;
-}
+    .characterDisplay img {
+        margin: 3px;
+        float: left;
+        max-height: 150px;
+    }
 
 ul.characterDetails li {
     list-style-type: none;
@@ -71,4 +71,16 @@ ul.characterDetails li {
 
     .popupForm input[type=checkbox], .popupForm input[type=submit] {
         width: auto;
+    }
+
+menu li {
+    display: inline;
+}
+
+    menu li::after {
+        content: " |";
+    }
+
+    menu li:last-of-type::after {
+        content: "";
     }
