@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PathfinderTools.Controllers
 {
@@ -13,6 +14,9 @@ namespace PathfinderTools.Controllers
         public IActionResult Contact()
         {
             ViewBag.Title = "Contact Us";
+
+            throw new InvalidOperationException();
+
             return View();
         }
 

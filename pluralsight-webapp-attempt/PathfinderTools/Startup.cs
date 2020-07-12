@@ -12,6 +12,7 @@ namespace PathfinderTools
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -23,7 +24,7 @@ namespace PathfinderTools
             }
             else
             {
-                // add error page
+                app.UseExceptionHandler("/Error");
             }
 
 
@@ -36,6 +37,7 @@ namespace PathfinderTools
                 config.MapControllerRoute("Fallback",
                     "{controller}/{action}/{id?}",
                     new { controller = "App", action = "Index" });
+                config.MapRazorPages();
             });
         }
     }
