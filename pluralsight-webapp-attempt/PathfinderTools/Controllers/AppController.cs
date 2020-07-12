@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace PathfinderTools.Controllers
 {
@@ -10,12 +9,14 @@ namespace PathfinderTools.Controllers
             return View();
         }
 
+        [HttpGet("contact")]
         public IActionResult Contact()
         {
             ViewBag.Title = "Contact Us";
             return View();
         }
 
+        [HttpGet("about")]
         public IActionResult About()
         {
             ViewBag.Title = "About Us";
