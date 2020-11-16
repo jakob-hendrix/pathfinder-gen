@@ -16,8 +16,6 @@ namespace PathfinderTools.Web.Controllers
             ViewBag.Title = "Contact Us";
 
             throw new InvalidOperationException();
-
-            return View();
         }
 
         [HttpGet("about")]
