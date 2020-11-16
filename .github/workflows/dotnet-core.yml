@@ -33,6 +33,7 @@ jobs:
           host: $ {{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
             whoami
@@ -43,6 +44,7 @@ jobs:
           host: $ {{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
         with:
           source: outputDirectory
