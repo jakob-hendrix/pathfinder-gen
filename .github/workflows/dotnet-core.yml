@@ -30,7 +30,7 @@ jobs:
       - name: Push code to Digital Ocean
         uses: appleboy/scp-action@master
         env:
-          HOST: $ {{ secrets.REMOTE_HOST }}
+          HOST: ${{ secrets.REMOTE_HOST }}
           PORT: ${{ secrets.REMOTE_PORT }}
           USERNAME: ${{ secrets.REMOTE_USER }}
           KEY: ${{ secrets.SSHKEY }}
