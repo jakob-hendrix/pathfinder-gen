@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PathfinderTools.Controllers
+namespace PathfinderTools.Web.Controllers
 {
     public class AppController : Controller
     {

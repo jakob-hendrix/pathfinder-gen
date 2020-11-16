@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PathfinderTools.Pages
+namespace PathfinderTools.Web.Pages
 {
     public class ErrorModel : PageModel
     {
