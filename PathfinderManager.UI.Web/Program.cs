@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace PathfinderManager.Web
+namespace PathfinderManager.UI.Web
 {
     public class Program
     {
