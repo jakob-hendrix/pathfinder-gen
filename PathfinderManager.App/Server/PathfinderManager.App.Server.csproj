@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\PathfinderManager.App.Client.csproj" />
     <ProjectReference Include="..\Shared\PathfinderManager.App.Shared.csproj" />
   </ItemGroup>
 

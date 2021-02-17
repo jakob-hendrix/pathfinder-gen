@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PathfinderManager.Library\PathfinderManager.Library.csproj" />
+  </ItemGroup>
+
 </Project>
