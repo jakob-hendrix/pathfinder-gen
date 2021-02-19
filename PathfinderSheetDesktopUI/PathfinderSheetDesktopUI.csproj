@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PathfinderManager.Library\PathfinderManager.Library.csproj" />
+    <ProjectReference Include="..\Pathfinder.CharacterEngine\Pathfinder.CharacterEngine.csproj" />
   </ItemGroup>
 
 </Project>
