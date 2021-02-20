@@ -1,4 +1,4 @@
-﻿namespace Pathfinder.CharacterEngine
+﻿namespace Pathfinder.CharacterEngine.Characters
 {
     public class Character
     {
@@ -7,5 +7,11 @@
         public string Race { get; set; }
         public int Age { get; set; }
         public int Level { get; set; }
+
+        #region Ability Scores
+
+        public AbilityScore Strength { get; set; }
+
+        #endregion
     }
 }
