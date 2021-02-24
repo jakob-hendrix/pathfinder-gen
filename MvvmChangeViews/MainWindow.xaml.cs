@@ -1,16 +1,17 @@
 ﻿using System.Windows;
-using System.Windows.Navigation;
+using MvvmChangeViews.ViewModels;
 
-namespace PathfinderSheetDesktopUI.Views
+namespace MvvmChangeViews
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }

@@ -1,12 +1,11 @@
-﻿using System.Windows;
-using System.Windows.Navigation;
+﻿using MvvmCross.Platforms.Wpf.Views;
 
-namespace PathfinderSheetDesktopUI.Views
+namespace MvxTutorial.WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class MainWindow : MvxWindow
     {
         public MainWindow()
         {
