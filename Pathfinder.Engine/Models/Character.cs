@@ -1,4 +1,4 @@
-﻿namespace Pathfinder.Engine.Characters
+﻿namespace Pathfinder.Engine.Models
 {
     public class Character
     {

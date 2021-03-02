@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pathfinder.Engine.Characters
+namespace Pathfinder.Engine.Models
 {
     /// <summary>
     /// Base class for Ability Scores such as Strength, Dexterity, etc

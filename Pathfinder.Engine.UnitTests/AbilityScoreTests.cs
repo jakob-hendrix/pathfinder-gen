@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Pathfinder.Engine.Characters;
+using Pathfinder.Engine.Models;
 
 namespace Pathfinder.Engine.UnitTests
 {
