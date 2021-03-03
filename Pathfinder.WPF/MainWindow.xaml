@@ -6,6 +6,17 @@
         mc:Ignorable="d"
         Title="Pathfinder Character Manager" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Main View"/>
+
+        <!--Main Content Window-->
+        <ContentControl Grid.Row="1"
+                        Content="{Binding Navigator.CurrentViewModel}" />
 
     </Grid>
 </Window>
+
