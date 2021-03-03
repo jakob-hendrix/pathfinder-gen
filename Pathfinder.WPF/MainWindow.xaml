@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Pathfinder.WPF.Views.Controls"
         mc:Ignorable="d"
         Title="Pathfinder Character Manager" Height="450" Width="800">
     <Grid>
@@ -11,12 +12,22 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Main View"/>
+        <!--File Menu-->
+        <controls:AppMenu Grid.Row="0"/>
 
-        <!--Main Content Window-->
-        <ContentControl Grid.Row="1"
-                        Content="{Binding Navigator.CurrentViewModel}" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="50"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
+            <!--Navigation Bar-->
+            <controls:NavigationBar Grid.Column="0" DataContext="{Binding Navigator}"/>
+
+            <!--Main Content Window-->
+            <ContentControl Grid.Column="1" Margin="10"
+                            Content="{Binding Navigator.CurrentViewModel}" />
+        </Grid>
     </Grid>
 </Window>
 
