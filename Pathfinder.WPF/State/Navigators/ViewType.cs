@@ -1,4 +1,4 @@
-﻿namespace Pathfinder.WPF.State
+﻿namespace Pathfinder.WPF.State.Navigators
 {
     /// <summary>
     /// Enumeration of the various Views (with ViewModels) available
@@ -6,6 +6,8 @@
     /// </summary>
     public enum ViewType
     {
-        Home
+        Home,
+        PlayerSheet,
+        CharacterData
     }
 }

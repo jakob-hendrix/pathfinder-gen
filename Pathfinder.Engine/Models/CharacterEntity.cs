@@ -2,7 +2,7 @@
 
 namespace Pathfinder.Engine.Models
 {
-    public class Character
+    public class CharacterEntity
     {
         public string Name { get; set; }
         public List<CharacterClass> ClassList { get; set; }

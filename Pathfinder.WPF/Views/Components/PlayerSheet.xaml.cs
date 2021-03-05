@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Pathfinder.WPF.Views.Components
 {
     /// <summary>
-    /// Interaction logic for CharacterBuilder.xaml
+    /// Interaction logic for PlayerSheet.xaml
     /// </summary>
-    public partial class CharacterBuilder : UserControl
+    public partial class PlayerSheet : UserControl
     {
-        public CharacterBuilder()
+        public PlayerSheet()
         {
             InitializeComponent();
         }

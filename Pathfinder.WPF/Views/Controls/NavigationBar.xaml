@@ -3,19 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:Pathfinder.WPF.ViewModels"
+             xmlns:navigators="clr-namespace:Pathfinder.WPF.State.Navigators"
+             xmlns:converters="clr-namespace:Pathfinder.WPF.Converters"
              mc:Ignorable="d"
              d:DesignHeight="200" d:DesignWidth="200">
+
+    <UserControl.Resources>
+        <converters:EqualValueToParameterConverter x:Key="EqualValueToParameterConverter"/>
+    </UserControl.Resources>
+
     <Grid Background="{StaticResource BrushPrimary1}" RenderOptions.EdgeMode="Aliased">
         <StackPanel Orientation="Vertical">
+
             <StackPanel.Resources>
                 <Style TargetType="RadioButton" BasedOn="{StaticResource NavButton}"/>
             </StackPanel.Resources>
 
-            <RadioButton Content="Player Sheet"/>
-            <RadioButton Content="Character Data"/>
-            <RadioButton Content="Feats/Abilities"/>
-            <RadioButton Content="Inventory"/>
-            <RadioButton Content="Spells"/>
-        </StackPanel>
+            <RadioButton Content="Player Sheet"
+                         IsChecked="{Binding CurrentViewModel, Mode=OneWay, ConverterParameter={x:Type viewModels:PlayerSheetViewModel}}"
+                         Command="{Binding UpdateCurrentViewModelCommand}"
+                         CommandParameter="{x:Static navigators:ViewType.PlayerSheet}"/>
+            <RadioButton Content="Edit Character"
+                         IsChecked="{Binding CurrentViewModel, Mode=OneWay, ConverterParameter={x:Type viewModels:CharacterEditorViewModel}}"
+                         Command="{Binding UpdateCurrentViewModelCommand}"
+                         CommandParameter="{x:Static navigators:ViewType.CharacterData}"/>
+            <RadioButton Content="Game State"/>
+            <RadioButton Content="Journal"/>
+
+         </StackPanel>
     </Grid>
 </UserControl>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using Pathfinder.WPF.State;
+using Pathfinder.WPF.State.Navigators;
 using Pathfinder.WPF.ViewModels.Factories.Common;
 
 namespace Pathfinder.WPF.Commands

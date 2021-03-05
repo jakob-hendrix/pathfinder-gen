@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Pathfinder.WPF.Views.Components
 {
     /// <summary>
-    /// Interaction logic for CharacterSheet.xaml
+    /// Interaction logic for CharacterEditor.xaml
     /// </summary>
-    public partial class CharacterSheet : UserControl
+    public partial class CharacterEditor : UserControl
     {
-        public CharacterSheet()
+        public CharacterEditor()
         {
             InitializeComponent();
         }

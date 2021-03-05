@@ -4,7 +4,7 @@ using Pathfinder.WPF.Models;
 using Pathfinder.WPF.ViewModels;
 using Pathfinder.WPF.ViewModels.Factories.Common;
 
-namespace Pathfinder.WPF.State
+namespace Pathfinder.WPF.State.Navigators
 {
     public class Navigator : ObservableObject, INavigator
     {

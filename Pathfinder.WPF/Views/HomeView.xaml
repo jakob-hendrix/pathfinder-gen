@@ -7,11 +7,13 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Location: Home View"/>
+        <TextBlock Grid.Row="1" Text="To begin editing your character, select the character data tab."/>
 
-        <StackPanel HorizontalAlignment="Left">
-            <TextBlock Text="Location: Home View"/>
-            <TextBlock Text="Enter Your Name:"/>
-            <TextBox  Width="150"/>
-        </StackPanel>
+        <!--TODO: If there is no current character initialized, add large buttons for save/load a character-->
     </Grid>
 </UserControl>
