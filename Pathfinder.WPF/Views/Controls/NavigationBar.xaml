@@ -21,11 +21,11 @@
             </StackPanel.Resources>
 
             <RadioButton Content="Player Sheet"
-                         IsChecked="{Binding CurrentViewModel, Mode=OneWay, ConverterParameter={x:Type viewModels:PlayerSheetViewModel}}"
+                         IsChecked="{Binding CurrentViewModel, Mode=OneWay, Converter={StaticResource EqualValueToParameterConverter}, ConverterParameter={x:Type viewModels:PlayerSheetViewModel}}"
                          Command="{Binding UpdateCurrentViewModelCommand}"
                          CommandParameter="{x:Static navigators:ViewType.PlayerSheet}"/>
             <RadioButton Content="Edit Character"
-                         IsChecked="{Binding CurrentViewModel, Mode=OneWay, ConverterParameter={x:Type viewModels:CharacterEditorViewModel}}"
+                         IsChecked="{Binding CurrentViewModel, Mode=OneWay, Converter={StaticResource EqualValueToParameterConverter}, ConverterParameter={x:Type viewModels:CharacterEditorViewModel}}"
                          Command="{Binding UpdateCurrentViewModelCommand}"
                          CommandParameter="{x:Static navigators:ViewType.CharacterData}"/>
             <RadioButton Content="Game State"/>

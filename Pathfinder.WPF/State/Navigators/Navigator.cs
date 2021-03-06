@@ -22,7 +22,7 @@ namespace Pathfinder.WPF.State.Navigators
             set
             {
                 _currentViewModel = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(CurrentViewModel));
             }
         }
 

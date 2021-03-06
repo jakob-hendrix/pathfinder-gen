@@ -13,7 +13,10 @@ namespace Pathfinder.WPF.State
 
         public void StartNewCharacter()
         {
-            CurrentCharacter = new CharacterEntity();
+            CurrentCharacter = new CharacterEntity
+            {
+                Name = "Jose Cuervo"
+            };
         }
     }
 }

@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:Pathfinder.WPF.Views.Components"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel HorizontalAlignment="Left">
+    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
         <TextBlock Text="Location: PlayerSheet"/>
-        <TextBlock Text="Enter Your Name:"/>
-        <TextBox  Width="150"/>
+        <TextBlock Text="Name:"/>
+        <TextBlock Text="{Binding CharacterStateManager.CurrentCharacter.Name}"/>
     </StackPanel>
 </UserControl>

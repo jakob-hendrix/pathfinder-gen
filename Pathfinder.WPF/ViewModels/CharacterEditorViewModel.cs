@@ -4,7 +4,7 @@ namespace Pathfinder.WPF.ViewModels
 {
     public class CharacterEditorViewModel : ViewModelBase
     {
-        public CharacterStateManager CharacterStateManager { get; set; }
+        public CharacterStateManager CharacterStateManager { get; }
 
         public CharacterEditorViewModel(CharacterStateManager characterStateManager)
         {
