@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
         <TextBlock Text="Location: PlayerSheet"/>
-        <TextBlock Text="Name:"/>
-        <TextBlock Text="{Binding CharacterStateManager.CurrentCharacter.Name}"/>
+        <TextBlock FontSize="30" Text="Name: "/>
+        <TextBlock FontSize="30" Text="{Binding CharacterStateManager.CurrentCharacter.Name}"/>
     </StackPanel>
 </UserControl>
