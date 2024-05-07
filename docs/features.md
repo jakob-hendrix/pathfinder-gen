@@ -16,15 +16,16 @@ To build an app that will allow ou to create and manage characters in the PAthfi
   - Base Character
     - Traits
   - Levels
+    - Class Options
     - Feats
     - Skills
   - Languages
-  - Class Options
   - Equipment & Loadout
   - Attacks
   - Spells
-  - Buffs & Conditions
-  - Game Log
+  - Game Tracking
+    - Buffs & Conditions
+    - Game Log
 
 ## Features
 
