@@ -14,27 +14,36 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
+
       - name: Install dependencies
         run: dotnet restore
+
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: |
+          cd PathfinderCharGen.Web
+          dotnet build --configuration Release --no-restore
+
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: |
+          dotnet test --no-restore --verbosity normal
+
       - name: Publish
         run: |
-          dotnet publish --configuration Release -o pathfinder-manager
+          dotnet publish --configuration Release -o pathfinder-gen
+
       - name: Push code to Digital Ocean
         uses: appleboy/scp-action@master
         env:
           HOST: ${{ secrets.REMOTE_HOST }}
-          PORT: ${{ secrets.REMOTE_PORT }}
+          #PORT: ${{ secrets.REMOTE_PORT }}
           USERNAME: ${{ secrets.REMOTE_USER }}
           KEY: ${{ secrets.SSHKEY }}
-          PASSPHRASE: ${{ secrets.PASSPHRASE }}
+          #PASSPHRASE: ${{ secrets.PASSPHRASE }}
         with:
-          source: pathfinder-manager
+          source: pathfinder-gen
           target: "/var/www/"
