@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderCharGen.RulesEngi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderCharGen.RulesEngine.Tests", "PathfinderCharGen.RulesEngine.Tests\PathfinderCharGen.RulesEngine.Tests.csproj", "{F577D8AC-55AE-437A-BE89-05D5C13AFD83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderCharGen.Console", "PathfinderCharGen.Console\PathfinderCharGen.Console.csproj", "{4852C4A7-C1C6-45BE-A1EA-9DE9F097BA55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathfinderCharGen.Console", "PathfinderCharGen.Console\PathfinderCharGen.Console.csproj", "{4852C4A7-C1C6-45BE-A1EA-9DE9F097BA55}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{EDD45EF6-8688-46AF-9D7C-6B243F59F7AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E3938D8-C9EB-48B2-BBD6-2AFF613DF0B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1AA12225-249A-4CEC-8F50-71095128BBA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
