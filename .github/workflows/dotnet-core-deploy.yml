@@ -45,9 +45,6 @@ jobs:
 
       - name: Push code to Digital Ocean
         uses: appleboy/scp-action@master
-        env:
-          USER: ${{ env.APP_USER }}
-          REMOTE: ${{ env.REMOTE_APP_FOLDER }}
         with:
           host: ${{ secrets.REMOTE_HOST }}
           port: ${{ secrets.REMOTE_PORT }}
@@ -55,8 +52,16 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           source: pathfinder-gen
           target: ${{ env.REMOTE_APP_FOLDER }}
-          script: |
-            sudo chown -R $USER:$USER $REMOTE
-            sudo chmod 755 -R $REMOTE/pathfinder-gen
-            sudo chmod g+s -R $REMOTE/pathfinder-gen
           
+      - name: Post copy cleanup
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          port: ${{ secrets.REMOTE_PORT }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSHKEY }}
+          script: |
+            sudo chown -R ${{ env.APP_USER }}:${{ env.APP_USER }} ${{ env.REMOTE_APP_FOLDER }}
+            sudo chmod 755 -R ${{ env.REMOTE_APP_FOLDER }}/pathfinder-gen
+            sudo chmod g+s -R ${{ env.REMOTE_APP_FOLDER }}/pathfinder-gen
+            
