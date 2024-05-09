@@ -43,10 +43,10 @@ jobs:
         uses: appleboy/scp-action@master
         env:
           HOST: ${{ secrets.REMOTE_HOST }}
-          #PORT: ${{ secrets.REMOTE_PORT }}
+          PORT: ${{ secrets.REMOTE_PORT }}
           USERNAME: ${{ secrets.REMOTE_USER }}
           KEY: ${{ secrets.SSHKEY }}
-          #PASSPHRASE: ${{ secrets.PASSPHRASE }}
+          PASSPHRASE: ${{ secrets.PASSPHRASE }}
         with:
           source: pathfinder-gen
           target: "/var/www/"
