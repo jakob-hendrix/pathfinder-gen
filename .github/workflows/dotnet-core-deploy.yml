@@ -27,17 +27,17 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      # - name: Install dependencies
-      #   run: dotnet restore
+      - name: Install dependencies
+        run: dotnet restore
 
-      # - name: Build
-      #   run: |
-      #     cd PathfinderCharGen.Web
-      #     dotnet build --configuration Release --no-restore
+      - name: Build
+        run: |
+          cd PathfinderCharGen.Web
+          dotnet build --configuration Release --no-restore
 
-      # - name: Test
-      #   run: |
-      #     dotnet test --no-restore --verbosity normal
+      - name: Test
+        run: |
+          dotnet test --no-restore --verbosity normal
 
       - name: Publish
         run: |
@@ -64,4 +64,6 @@ jobs:
             sudo chown -R ${{ env.APP_USER }}:${{ env.APP_USER }} ${{ env.REMOTE_APP_FOLDER }}
             sudo chmod 755 -R ${{ env.REMOTE_APP_FOLDER }}/pathfinder-gen
             sudo chmod g+s -R ${{ env.REMOTE_APP_FOLDER }}/pathfinder-gen
-            
+            sudo systemctl stop pathfinder-gen
+            sudo systemctl start pathfinder-gen
+
