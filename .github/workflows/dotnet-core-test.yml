@@ -2,6 +2,12 @@ name: dotnet test
 
 on:
   push:
+    branches: [master]
+  
+  # pull_request:
+  #   branches: 
+  #     - master
+  #     - main
 
   workflow_dispatch:
 
