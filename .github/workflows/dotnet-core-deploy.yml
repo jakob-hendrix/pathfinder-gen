@@ -9,6 +9,10 @@ on:
 
   workflow_dispatch:
 
+env:
+  REMOTE_APP_FOLDER: "/var/www/"
+  APP_USER: www-data
+
 jobs:
   build:
     name: Release and Deploy
@@ -46,6 +50,10 @@ jobs:
           port: ${{ secrets.REMOTE_PORT }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSHKEY }}
-          #PASSPHRASE: ${{ secrets.PASSPHRASE }}
           source: pathfinder-gen
-          target: "/var/www/"
+          target: ${{ env.REMOTE_APP_FOLDER }}
+          script: |
+            sudo chown -R ${{ env.APP_USER }}:${{ env.APP_USER }} ${{ env.REMOTE_APP_FOLDER }}
+            sudo chmod 755 -R ${{ env.REMOTE_APP_FOLDER }}/pathfinder-gen
+            sudo chmod g+s -R ${{ env.REMOTE_APP_FOLDER }}/pathfinder-gen
+          
