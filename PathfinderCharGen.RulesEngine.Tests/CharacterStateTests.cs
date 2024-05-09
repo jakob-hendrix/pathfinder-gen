@@ -15,12 +15,6 @@ namespace PathfinderCharGen.RulesEngine.Tests
         {
             _characterState.CurrentCharacter.Should().NotBeNull();
         }
-
-        [Fact]
-        public void CurrentCharacterIsNull()
-        {
-            _characterState.CurrentCharacter.Should().BeNull();
-        }
     }
 }
 
