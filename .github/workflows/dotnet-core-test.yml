@@ -10,6 +10,8 @@ on:
       - '**.cs'
       - '**.csproj'
 
+  workflow_dispatch:
+
 jobs:
   build-and-test:
 
