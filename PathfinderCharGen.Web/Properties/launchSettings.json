@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "digitalocean": { 
+    "dotnet": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
@@ -43,3 +43,5 @@
         }
       }
     }
+  }
+}
