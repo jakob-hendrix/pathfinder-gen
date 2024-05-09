@@ -13,6 +13,7 @@ namespace PathfinderCharGen.RulesEngine.Tests
         [Fact]
         public void CurrentCharacterIsNotNull()
         {
+            // temp comment
             _characterState.CurrentCharacter.Should().NotBeNull();
         }
     }
