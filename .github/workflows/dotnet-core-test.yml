@@ -2,7 +2,9 @@ name: dotnet test
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+      - staging
   
   # pull_request:
   #   branches: 
